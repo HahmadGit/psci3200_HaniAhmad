@@ -110,10 +110,6 @@ summary_df <- CPI.ti %>%
   left_join(suicide.dta %>% select(Year, HealthEXpc = SH.XPD.CHEX.PC.CD), by = "Year") %>%
   left_join(suicide.dta %>% select(Year, SecondaryEdu = SE.SEC.CUAT.UP.ZS), by = "Year") 
   
-  
-# View the resulting data frame
-print(summary_df)
-
 clean_summary_df <- summary_df %>%
   filter(complete.cases(.))
 
