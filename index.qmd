@@ -302,6 +302,6 @@ For future research efforts there are several aspects that could be improved on.
 While the findings possess interesting initial insights, particularly for policy development targeting gender-specific needs, the results are not very robust and need to be approached with caution. Further research using larger data sets with more historic data, or potentially combining indicators from multiple sources could provide stronger evidence and help refine the implications for policy and intervention strategies.
 
 
-
+# References
 
 
