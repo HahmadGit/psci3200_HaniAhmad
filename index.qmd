@@ -76,7 +76,7 @@ Additionally, specific mortality outcomes from the World Health Organization's G
 To capture a broader perspective on mental health crises that might be influenced by socio-economic factors affected by corruption, additional variables from the World Bank's World Development Indicators have been included. These are the suicide mortality rate per 100,000 population, along with gender-specific rates for males and females. These rates will help to explore whether corruption's impact on public despair also shows variation between genders, potentially reflecting different social, economic, and cultural pressures experienced by males and females. GDP per capita is measured in current USD value. Unemployment is measured as a percentage of the total labor force. Health Expenditure is the total spending in current USD value. Education attainment is the percentage of adults that completed secondary education. 
 
 ### Table
-```{r}
+```{r, echo=FALSE}
 
 # suicide.dta = WDI(indicator=c('SH.STA.SUIC.P5', 'SH.STA.SUIC.FE.P5','SH.STA.SUIC.MA.P5', 'SP.POP.TOTL', 'NY.GDP.PCAP.CD', 'SL.UEM.TOTL.NE.ZS', 'SH.XPD.CHEX.PC.CD', 'SE.SEC.CUAT.UP.ZS'), country=c('HND'), start=2000, end=2023)
 
@@ -166,7 +166,7 @@ Gender could significantly influence both the perception of corruption and the h
 # Findings
 
 ## Plot of Deaths of Despair in the Thousands and CPI Over Time
-```{r}
+```{r, echo=FALSE}
 transformation_ratio <-  max(Comb.dta$Total, na.rm = T) / max(Comb.dta$Honduras, na.rm = T)
 
 #create scaled CPI variable
@@ -202,7 +202,7 @@ Despair.g
 
 ## Regression Model
 
-```{r}
+```{r, echo=FALSE}
 # Assuming the model is already estimated, e.g., using lm() for linear regression
 model <- lm(Total.Despair ~ CPI + GDPpc + Unemployment+ HealthEXpc + SecondaryEdu, data = summary_df)
 
@@ -231,7 +231,7 @@ The results suggest that the variables GDP per capita and unemployment rate sign
 ## Empirical Extension Regression - Male
 
 
-```{r}
+```{r, echo=FALSE}
 # Assuming the model is already estimated, e.g., using lm() for linear regression
 male_model <- lm(Totalma.Despair ~ CPI + GDPpc + Unemployment+ HealthEXpc + SecondaryEdu, data = summary_df)
 
@@ -260,7 +260,7 @@ The results should be interpreted with caution due to the small sample size and 
 ## Empirical Extension Regression - Female
 
 
-```{r}
+```{r, echo=FALSE}
 # Assuming the model is already estimated, e.g., using lm() for linear regression
 female_model <- lm(Totalfe.Despair ~ CPI + GDPpc + Unemployment+ HealthEXpc + SecondaryEdu, data = summary_df)
 
