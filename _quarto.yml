@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "psci3200_HaniAhmad"
+  title: "Final Project Assignment"
   navbar:
     left:
       - href: index.qmd
